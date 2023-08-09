@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'myapp',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# settings.py
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'rajandeepkaur446@gamil.com'  # Replace with your Gmail email
+EMAIL_HOST_PASSWORD = '6116Rajan+'  # Replace with your app-specific password

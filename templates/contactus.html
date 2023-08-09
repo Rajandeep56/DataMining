@@ -1,8 +1,11 @@
-<h1>Contact Us</h1>
-<form method="post">
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %} {# Load the crispy forms tags explicitly #}
+
+{% block content %}
+  <h2>Contact Us</h2>
+  <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <div class="form-actions">
-      <button type="submit">Send</button>
-    </div>
-</form>
+    {% crispy form %}
+  </form>
+{% endblock %}
