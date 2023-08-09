@@ -43,8 +43,8 @@ def contactus(request):
              
              send_mail(subject='testing django',
                        message =f'Name: {name}\nEmail: {email}\nMessage: {message}',
-                       from_email='rajandeepkaur446@gmail.com',
-                       recipient_list=['rajandeepkaur61@outlook.com'])
+                       from_email='rajandeepkaur61@outlook.com',
+                       recipient_list=['rajandeepkaur446@gmail.com'])
              return redirect('contactus')
 
     return render(request, 'contactus.html', {'form': form})
